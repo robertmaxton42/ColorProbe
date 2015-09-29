@@ -12,6 +12,33 @@ using System.Windows.Forms;
 namespace ColorProbe
 {
     //From Pinvoke.net: http://www.pinvoke.net/default.aspx/gdi32/GetPixel.html
+
+    public partial class probeForm : Form
+    {
+        public probeForm()
+        {
+            InitializeComponent();
+
+            //Captures mouse and runs position-checker.
+            this.Capture = true;
+            this.MouseMove += probeForm_MouseMove;
+        }
+
+        private void probeForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            Color c = Win32.GetPixelColor(e.X, e.Y);
+
+            colorLabel.BackColor = c;
+            hueLabel.Text = c.GetHue().ToString("N0");
+            satLabel.Text = c.GetSaturation().ToString("P0");
+            valLabel.Text = c.GetBrightness().ToString("P0");
+
+            redLabel.Text = c.R.ToString() + "/" + c.R.ToString("X2");
+            greenLabel.Text = c.G.ToString() + "/" + c.G.ToString("X2");
+            blueLabel.Text = c.B.ToString() + "/" + c.B.ToString("X2");
+        }
+    }
+
     sealed class Win32
     {
         [DllImport("user32.dll")]
@@ -33,23 +60,6 @@ namespace ColorProbe
                          (int)(pixel & 0x0000FF00) >> 8,
                          (int)(pixel & 0x00FF0000) >> 16);
             return color;
-        }
-    }
-
-    public partial class probeForm : Form
-    {
-        public probeForm()
-        {
-            InitializeComponent();
-
-            //Captures mouse and runs position-checker.
-            this.Capture = true;
-            this.MouseMove += probeForm_MouseMove;
-        }
-
-        private void probeForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            colorLabel.BackColor = Win32.GetPixelColor(e.X, e.Y);
         }
     }
 }
