@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.colorLabel = new System.Windows.Forms.Label();
             this.hueLabelLabel = new System.Windows.Forms.Label();
             this.hueLabel = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@
             this.greenLabelLabel = new System.Windows.Forms.Label();
             this.redLabel = new System.Windows.Forms.Label();
             this.redLabelLabel = new System.Windows.Forms.Label();
+            this.getColorTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // colorLabel
@@ -161,11 +163,17 @@
             this.redLabelLabel.TabIndex = 7;
             this.redLabelLabel.Text = "Red:";
             // 
+            // getColorTimer
+            // 
+            this.getColorTimer.Enabled = true;
+            this.getColorTimer.Interval = 50;
+            this.getColorTimer.Tick += new System.EventHandler(this.getColorTimer_Tick);
+            // 
             // probeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(181, 132);
+            this.ClientSize = new System.Drawing.Size(181, 88);
             this.Controls.Add(this.blueLabel);
             this.Controls.Add(this.greenLabel);
             this.Controls.Add(this.blueLabelLabel);
@@ -201,6 +209,7 @@
         private System.Windows.Forms.Label greenLabelLabel;
         private System.Windows.Forms.Label redLabel;
         private System.Windows.Forms.Label redLabelLabel;
+        private System.Windows.Forms.Timer getColorTimer;
     }
 }
 

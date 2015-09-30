@@ -17,17 +17,16 @@ namespace ColorProbe
     {
         public probeForm()
         {
-            InitializeComponent();
-
-            //Captures mouse and runs position-checker.
-            this.Capture = true;
-            this.MouseMove += probeForm_MouseMove;
+            InitializeComponent();            
         }
-
-        private void probeForm_MouseMove(object sender, MouseEventArgs e)
+        
+        private void getColorTimer_Tick(object sender, EventArgs e)
         {
-            Color c = Win32.GetPixelColor(e.X, e.Y);
+            Point pos = System.Windows.Forms.Cursor.Position;
 
+            Color c = Win32.GetPixelColor(pos.X, pos.Y);
+
+            //Fills labels
             colorLabel.BackColor = c;
             hueLabel.Text = c.GetHue().ToString("N0");
             satLabel.Text = c.GetSaturation().ToString("P0");
