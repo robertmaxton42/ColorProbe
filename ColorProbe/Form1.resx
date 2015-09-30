@@ -120,4 +120,27 @@
   <metadata name="getColorTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAQAAAABAAoAQAAJgAAACAgEAAAAAQA6AIAAE4BAAAoAAAAEAAAACAAAAABAAQAAAAAAIAA
+        AAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/
+        AAAA//8A/wAAAP8A/wD//wAA////AKqqqqr/////qqqqqq////+qAAqqr////6oKoKqv////qqCqD///
+        //+qqgqg/////6qqoKoP////+qqqCqD////6qqrwqg8A//qv//8KoAD///////CgD////////wAP////
+        ///wAAD///////D/AAD////////wAP////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAA
+        AAAAAAAAEAAAABAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD/
+        /wD/AAAA/wD/AP//AAD///8A/////////////////////6qqqqqqqqqv//////////+qqqqqqqqqr///
+        ////////qqqqqqqqqqqv/////////6qqqqqqqqqqr/////////+qqqAACqqqqq//////////qqoKqqCq
+        qqqv/////////6qqCqqqCqqqr/////////+qqqCqqqCqqq//////////qqqqCqqqCv///////////6qq
+        qqCqqqD///////////+qqqqqCqqqD///////////qqqqqqCqqqD//////////6qqqqqqCqqqD///////
+        //+qqqqqqqCqqqD//////////6qqqqqqCqqqD/////////+qqqqqqqCqqqD/////////qqqqqqr/Cqqq
+        D//wAA///6qq//////CqqqD/AAD///+qqv//////CqqqAAAP//////////////CqqgAA////////////
+        ////CqAAD/////////////////AAAAD///////////////8AAAAA///////////////wAAAAAA//////
+        ////////8AAAAAAA//////////////AA/wAAAAAP///////////wD//wAAAAD////////////////wAA
+        AA/////////////////wAAAP////////////////8AAAD/////////////////AAAA8AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>

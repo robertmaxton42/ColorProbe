@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(probeForm));
             this.colorLabel = new System.Windows.Forms.Label();
             this.hueLabelLabel = new System.Windows.Forms.Label();
             this.hueLabel = new System.Windows.Forms.Label();
@@ -187,6 +188,7 @@
             this.Controls.Add(this.hueLabel);
             this.Controls.Add(this.hueLabelLabel);
             this.Controls.Add(this.colorLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "probeForm";
             this.Text = "Color Probe";
             this.ResumeLayout(false);
