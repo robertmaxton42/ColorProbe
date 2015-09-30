@@ -23,18 +23,31 @@ namespace ColorProbe
         private void getColorTimer_Tick(object sender, EventArgs e)
         {
             Point pos = System.Windows.Forms.Cursor.Position;
-
             Color c = Win32.GetPixelColor(pos.X, pos.Y);
+            float[] hsv;
 
             //Fills labels
             colorLabel.BackColor = c;
-            hueLabel.Text = c.GetHue().ToString("N0");
-            satLabel.Text = c.GetSaturation().ToString("P0");
-            valLabel.Text = c.GetBrightness().ToString("P0");
+            hueHSVLabel.Text = c.GetHue().ToString("N0");
+            satHSVLabel.Text = c.GetSaturation().ToString("P0");
+            valHSVLabel.Text = c.GetBrightness().ToString("P0");
+
+            hsv = hsvToHSL(c.GetHue(), c.GetSaturation(), c.GetBrightness());
+            satHSLLabel.Text = hsv[1].ToString("P0");
+            lumHSLLabel.Text = hsv[2].ToString("P0");
 
             redLabel.Text = c.R.ToString() + "/" + c.R.ToString("X2");
             greenLabel.Text = c.G.ToString() + "/" + c.G.ToString("X2");
             blueLabel.Text = c.B.ToString() + "/" + c.B.ToString("X2");
+        }
+
+        private float[] hsvToHSL(float h, float s, float v)
+        {
+            float ho = h;
+            float lo = (v * (2 - s) / 2);
+            float so = ((v * s) / (1 - Math.Abs(2 * lo - 1)));
+
+            return new float[] { ho, so, lo };
         }
     }
 
